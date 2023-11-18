@@ -9,6 +9,7 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var mainColorView: UIView!
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
@@ -17,6 +18,7 @@ final class ViewController: UIViewController {
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         mainViewSetup()
@@ -30,6 +32,7 @@ final class ViewController: UIViewController {
         
     }
 
+    // MARK: - IB Actions
     @IBAction func redSliderAction() {
         redLabel.text = redSlider.value.formatted()
         mainColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 0.5)
@@ -43,6 +46,7 @@ final class ViewController: UIViewController {
         mainColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 0.5)
     }
     
+    // MARK: - Private Methods - Setup UI
     private func mainViewSetup() {
         mainColorView.layer.cornerRadius = 20
         mainColorView.backgroundColor = .white
