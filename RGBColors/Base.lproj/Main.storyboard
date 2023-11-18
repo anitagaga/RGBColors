@@ -52,6 +52,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Cqm-DC-37n"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2L-zN-zyO"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
@@ -83,6 +86,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Znc-Do-so3"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="d46-u8-nbS"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
@@ -114,6 +120,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="pHx-b6-n8U"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Cl2-wf-arJ"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
@@ -138,6 +147,15 @@
                             <constraint firstItem="4fQ-An-jFb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="z4q-1r-c8M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="xVc-ga-pla" id="Fup-gT-CXv"/>
+                        <outlet property="blueSlider" destination="WtT-Ma-fnC" id="3tF-4L-tC2"/>
+                        <outlet property="greenLabel" destination="SSf-e4-VyW" id="tsx-Wa-6z6"/>
+                        <outlet property="greenSlider" destination="Vpy-MR-EDU" id="ydZ-M7-dwg"/>
+                        <outlet property="mainColorView" destination="4fQ-An-jFb" id="Jjm-zK-1pF"/>
+                        <outlet property="redLabel" destination="nW8-Pv-dPA" id="92G-lT-100"/>
+                        <outlet property="redSlider" destination="9cg-RJ-C4P" id="SaF-f0-Uo4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
