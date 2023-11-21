@@ -23,58 +23,48 @@ final class ViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        redSliderSetup()
-        greenSliderSetup()
-        blueSliderSetup()
-        mainViewSetup()
         
-        redLabel.text = redSlider.value.formatted()
-        greenLabel.text = greenSlider.value.formatted()
-        blueLabel.text = blueSlider.value.formatted()
+        mainColorView.layer.cornerRadius = 20
+        setColorForMainColorView ()
         
+        redLabel.text = string(from: redSlider)
+        greenLabel.text = string(from: greenSlider)
+        blueLabel.text = string(from: blueSlider)
     }
 
     // MARK: - IB Actions
-    @IBAction func redSliderAction() {
-        redLabel.text = String(format: "%.2f",redSlider.value)
-        setColorForMainColorView ()
-    }
-    @IBAction func greenSliderAction() {
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-        setColorForMainColorView ()
-    }
-    @IBAction func blueSliderAction() {
-        blueLabel.text = String(format: "%.2f",blueSlider.value)
-        setColorForMainColorView ()
-    }
-    
-    // MARK: - Private Methods - Setup UI
-    private func mainViewSetup() {
-        mainColorView.layer.cornerRadius = 20
-        setColorForMainColorView ()
-    }
-    private func redSliderSetup() {
-        redSlider.minimumTrackTintColor = .red
-        redSlider.value = 0.1
-    }
-    
-    private func greenSliderSetup() {
-        greenSlider.minimumTrackTintColor = .green
-        greenSlider.value = 0.1
-    }
-    
-    private func blueSliderSetup() {
-        blueSlider.minimumTrackTintColor = .blue
-        blueSlider.value = 0.1
+    @IBAction func sliderAction(_ sender: UISlider) {
+        switch sender {
+        case redSlider:
+            redLabel.text = string(from: redSlider)
+        case greenSlider:
+            greenLabel.text = string(from: greenSlider)
+        default:
+            blueLabel.text = string(from: blueSlider)
+        }
+        
+        setColorForMainColorView()
     }
     
     // MARK: - Private Methods - Others
     
     private func setColorForMainColorView () {
-        mainColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                                green: CGFloat(greenSlider.value),
-                                                blue: CGFloat(blueSlider.value),
-                                                alpha: 0.5)
+        mainColorView.backgroundColor = UIColor(
+            red: redSlider.value.cgFloat(),
+            green: greenSlider.value.cgFloat(),
+            blue: blueSlider.value.cgFloat(),
+            alpha: 0.5
+        )
+    }
+    
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f",slider.value)
+    }
+}
+
+extension Float {
+    func cgFloat() -> CGFloat{
+        CGFloat(self)
     }
 }
 
