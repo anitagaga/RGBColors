@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class SettingViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var mainColorView: UIView!
