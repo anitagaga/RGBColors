@@ -46,6 +46,10 @@ final class SettingViewController: UIViewController {
         setColorForMainColorView()
     }
     
+    @IBAction func doneButtonAction() {
+        dismiss(animated: true)
+    }
+    
     // MARK: - Private Methods - Others
     
     private func setColorForMainColorView () {
