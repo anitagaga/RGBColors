@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B0527D3A2B22B8F80041DF12 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0527D392B22B8F80041DF12 /* ColorViewController.swift */; };
+		B0527D3A2B22B8F80041DF12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0527D392B22B8F80041DF12 /* MainViewController.swift */; };
 		B0EA2A3A2B08A44900FA973C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA2A392B08A44900FA973C /* AppDelegate.swift */; };
 		B0EA2A3C2B08A44900FA973C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA2A3B2B08A44900FA973C /* SceneDelegate.swift */; };
 		B0EA2A3E2B08A44900FA973C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA2A3D2B08A44900FA973C /* SettingViewController.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B0527D392B22B8F80041DF12 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		B0527D392B22B8F80041DF12 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B0EA2A362B08A44900FA973C /* RGBColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EA2A392B08A44900FA973C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0EA2A3B2B08A44900FA973C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				B0EA2A3D2B08A44900FA973C /* SettingViewController.swift */,
-				B0527D392B22B8F80041DF12 /* ColorViewController.swift */,
+				B0527D392B22B8F80041DF12 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			files = (
 				B0EA2A3E2B08A44900FA973C /* SettingViewController.swift in Sources */,
 				B0EA2A3A2B08A44900FA973C /* AppDelegate.swift in Sources */,
-				B0527D3A2B22B8F80041DF12 /* ColorViewController.swift in Sources */,
+				B0527D3A2B22B8F80041DF12 /* MainViewController.swift in Sources */,
 				B0EA2A3C2B08A44900FA973C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
