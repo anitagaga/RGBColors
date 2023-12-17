@@ -123,7 +123,7 @@ extension SettingViewController {
         String(format: "%.2f",slider.value)
     }
     
-    private func showAlert(withTitle tiyle: String, andMessage message: String, textField:UITextField? = nil) {
+    private func showAlert(withTitle title: String, andMessage message: String, textField:UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = "0.50"
@@ -171,7 +171,7 @@ extension SettingViewController: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        //guard textField != redTextField else { return }
+        guard textField != redTextField else { return }
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
         textField.inputAccessoryView = keyboardToolbar
